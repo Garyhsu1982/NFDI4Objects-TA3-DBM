@@ -1,0 +1,66 @@
+{
+    "dataflow_description": {},
+    "service_dmp": {},
+    "service_hours_per_unit": 0,
+    "service_access_unit": [],
+    "service_keywords": [],
+    "service_example_inputs": [
+        "samples, objects (?? I'm not sure this is the right answer) "
+    ],
+    "service_example_outputs": [
+        "?? not sure waht to put here"
+    ],
+    "service_reference": [],
+    "service_links": [
+        {}
+    ],
+    "service_team": [
+        {
+            "team_member_roles": []
+        }
+    ],
+    "service_resources": [
+        "??"
+    ],
+    "service_methods": [
+        "Micro-XRF analysis was performed using a Bruker ARTAX spectrometer equipped with a Mo target, SDD detector and a polycapillary to focus the X-ray beam. Measurements were collected using the following setup: 30 kV, 500 μA current. A 25 µm molybdenum filter was used in the beam path, mainly to reduce unwanted Bragg-peaks in the spectrum. Measurements were carried out in air. The working distance was about 1 mm and the spot size about 100 μm (depending slightly on the X-ray energy. The instrument has a camera-laser system for sample visualising the sample surface. The measuring head of the spectrometer is motorized and can be moved in X, Y and Z direction. This facilitates an easy positioning of the sample and enables line or area scans. "
+    ],
+    "service_functions": [
+        "material analysis"
+    ],
+    "research_disciplines": [
+        "Heritage science, preventive conservation, Archaeology, Ethnography, technical art history, "
+    ],
+    "service_contact": [
+        {
+            "contact_type": "email",
+            "contact": "rf@smb.spk-berlin.de"
+        }
+    ],
+    "service_provider": [
+        {
+            "provider_roles": "All Above",
+            "provider_id": "RF-SMB "
+        }
+    ],
+    "service_techniques": [],
+    "support_activity": [
+        {
+            "type": []
+        }
+    ],
+    "service_operating_languages": [
+        "de - German",
+        "en - English"
+    ],
+    "pid": "?? There is no landing page for this service. ",
+    "pref_label": "RF-SPK µXRF (ARTAX)",
+    "scope_note": "XRF analysis with energy dispersive detection for qualitative or quantitative material analysis. Metal alloys could be analysed quantitative while other materials like elements on paintings are commonly assessed in a qualitative way.  ",
+    "service_readiness_level": "6 - Service demonstrated in HS environment",
+    "service_application_required": true,
+    "service_access_unit_cost": 0,
+    "service_limitations": "The access to the service is limited by the resources and capacities of the RF-SPK who is providing this service. The decision if a service can be provided is taken by the RF-SPK. ",
+    "service_version": "Is this a question of hardware/machine or also data treatment? There might be several service versions used even at the same time: e.g. we have different way of evaluation the data (quantitative, qualitative or sometimes also semi-quantitative",
+    "service_active": true,
+    "service_output": "spx spectra, excel table with result, images of measurement spot, report pdf"
+}
