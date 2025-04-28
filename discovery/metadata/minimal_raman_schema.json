@@ -1,0 +1,186 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://e-rihs.io/schema/raman-v1.0.schema.json",
+    "title": "Minimal Raman Instrumentation",
+    "description": "The schema outlines the minimal requirement for reporting a Raman experiment",
+    "type": "object",
+    "required": [
+        "laserWavelength",
+        "laserPower",
+        "accumulation",
+        "integrationTime",
+        "resolution",
+        "objective"
+    ],
+    "properties": {
+        "laserWavelength": {
+            "title": "Laser wavelength",
+            "description": "The wavelength of the excitation laser",
+            "type": "object",
+            "properties": {
+                "wavelength": {
+                    "title": "Wavelength",
+                    "type": "number"
+                    },
+                "wavelength_unit": {
+                    "title": "Wavelength unit",
+                    "type": "string",
+                    "enum": [
+                        "nm",
+                        "cm⁻¹"
+                    ]
+                    }
+                }
+        },
+        "laserPower": {
+            "title": "Laser power",
+            "description": "The power level of the excitation laser (nominal)",
+            "type": "object",
+            "properties": {
+                "power": {
+                    "title": "Power",
+                    "type": "number"
+                    },
+                "power_unit": {
+                    "title": "Power unit",
+                    "type": "string",
+                    "enum": [
+                        "W",
+                        "kW",
+                        "mW"
+                    ]
+                }
+            }
+        },
+        "spotSize": {
+            "title": "Spot size",
+            "description": "Laser spot diameter as determined by laser wavelength and microscope objective",
+            "type": "object",
+            "properties": {
+                "spotsize": {
+                    "title": "Spot size",
+                    "type": "number"
+                    },
+                "spotsize_unit": {
+                    "title": "Spot size unit",
+                    "type": "string",
+                    "enum": [
+                        "mm",
+                        "µm",
+                        "nm",
+                        "pm"
+                    ]
+                }
+            }
+        },
+        "accumulation": {
+            "title": "Accumulation",
+            "description": "The number of scan on each sample exposure",
+            "type": "object",
+            "properties": {
+                "accumulation":{
+                    "title": "Accumulation",
+                    "type": "number"
+                }
+            }
+        },
+        "integrationTime": {
+            "title": "Integration time",
+            "description": "The measure of how long the scattered light is exposed to the detector. Also known as exposure time",
+            "type": "object",
+            "properties": {
+                "integration_time": {
+                    "title": "duration",
+                    "type": "number"
+                    },
+                "unit": {
+                    "title": "unit",
+                    "type": "string",
+                    "enum": [
+                        "s",
+                        "ms"
+                    ]
+                }
+            }
+        },
+        "resolution": {
+            "title": "Spectral resolution",
+            "description": "The spectral resolution of a Raman spectrometer",
+            "type": "object",
+            "properties": {
+                "resolution": {
+                    "title": "Resolution",
+                    "type": "number"
+                    },
+                "resolution_unit": {
+                    "title": "unit",
+                    "type": "string",
+                    "enum": [
+                        "nm",
+                        "cm⁻¹"
+                    ]
+                }
+            }
+        },
+        "maxRange": {
+            "title": "Maximum range",
+            "description": "The maximum spectral range of a Raman spectrum",
+            "type": "object",
+            "properties": {
+                "max_range": {
+                    "title": "Maximum range",
+                    "type": "number"
+                    },
+                "max_range_unit": {
+                    "title": "unit",
+                    "type": "string",
+                    "enum": [
+                        "nm",
+                        "cm⁻¹"
+                    ]
+                }
+            }
+        },
+        "minRange": {
+            "title": "Minimum range",
+            "description": "The minimum spectral range of a Raman spectrum",
+            "type": "object",
+            "properties": {
+                "min_range": {
+                    "title": "Minimum range",
+                    "type": "number"
+                    },
+                "min_range_unit": {
+                    "title": "unit",
+                    "type": "string",
+                    "enum": [
+                        "nm",
+                        "cm⁻¹"
+                    ]
+                }
+            }
+        },
+        "detectorModel": {
+            "title": "Detector model",
+            "description": "Model name of the CCD detector",
+            "type": "object",
+            "properties": {
+                "detector_model":{
+                    "title": "Detector model",
+                    "type": "string"
+                }
+            }
+        },
+        "objective": {
+            "title": "Objective",
+            "description": "Front optical element in a microscope that gathers or brings light from or to the object being observed",
+            "type": "object",
+            "properties": {
+                "objective":{
+                    "title": "Objective",
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+{
+  "extra_fields": {
+    "Laser wavelength": {
+      "type": "number",
+      "value":"",
+      "description":"The wavelength of the excitation laser",
+      "units":[
+        "nm",
+        "cm⁻¹"
+      ],
+      "position":1
+    },
+    "Laser power": {
+      "type": "number",
+      "value":"",
+      "description":"The power level of the excitation laser (nominal)",
+      "units":[
+        "W",
+        "kW",
+        "mW"
+      ],
+      "position":2
+    },
+    "Spot size":{
+      "type":"number",
+      "value":"",
+      "description": "Laser spot diameter as determined by laser wavelength and microscope objective",
+      "units":[
+      "mm",
+      "µm",
+      "nm",
+      "pm"
+     ],
+     "position":3
+    },
+    "Accumulation": {
+      "type": "number",
+      "value":"",
+      "description":"The number of scan on each sample exposure",
+      "position":4
+    },
+    "Integration time":{
+      "type":"number",
+      "value":"",
+      "description":"The measure of how long the scattered light is exposed to the detector. Also known as exposure time",
+      "units":[
+      "s",
+      "ms"
+     ],
+     "position":5
+    },
+    "Resolution":{
+      "type":"number",
+      "value":"",
+      "description":"the spectral resolution of a Raman spectrometer",
+      "units":[
+      "cm⁻¹",
+      "nm"
+     ],
+     "position":6
+    },
+    "Max range":{
+        "type":"number",
+        "value":"",
+        "description":"The maximum spectral range of a Raman spectrum",
+        "units":[
+        "cm⁻¹",
+        "nm"
+       ],
+       "position":7
+    },
+    "Min range":{
+        "type":"number",
+        "value":"",
+        "description":"The minimum spectral range of a Raman spectrum",
+        "units":[
+        "cm⁻¹",
+        "nm"
+        ],
+       "position":8
+    },
+    "Detector model": {
+        "type": "text",
+        "value":"",
+        "description":"Model name of the CCD detector",
+        "position":9
+    },
+    "Objective": {
+      "type": "number",
+      "value":"",
+      "description":"Front optical element in a microscope that gathers or brings light from or to the object being observed",
+      "position":10
+    }
+  }
+}

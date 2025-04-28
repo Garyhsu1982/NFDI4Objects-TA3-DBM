@@ -1,0 +1,85 @@
+{
+  "extra_fields": {
+    "Radiation source": {
+      "type": "text",
+      "value":"",
+      "description":"The anode material used for the source of radiation",
+      "options":[
+        "Cu",
+        "Co",
+        "Mo",
+        "Cr",
+        "Fe",
+        "Ag",
+      ],
+      "position":1
+    },
+    "Radiation wavelength": {
+      "type": "number",
+      "value":"",
+      "description":"The wavelength of radiation in Angstrom or nanometer",
+      "units":[
+        "Å",
+        "nm"
+      ],
+      "position":2
+    },
+    "Voltage":{
+      "type":"number",
+      "value":"",
+      "description": "Acceleration voltage of the X-ray tube",
+      "units":[
+      "µV",
+      "mV",
+      "V",
+      "kV"
+     ],
+     "position":3
+    },
+    "Current":{
+      "type":"number",
+      "value":"",
+      "description":"Electric current of the X-ray tube",
+      "units":[
+        "µA",
+        "mA",
+        "A",
+        "kA"
+     ],
+     "position":4
+    },
+    "Step size":{
+      "type":"number",
+      "value":"",
+      "description":"The angular interval between consecutive measurement points during a scan",
+      "units":[
+      "°2θ"
+     ],
+     "position":5
+    },
+    "Step mode":{
+        "type":"text",
+        "value":"",
+        "description":"The scanning technique where the instrument collects diffraction data at discrete angles, usually in small increments",
+        "position":6
+    },
+    "Start position":{
+        "type":"number",
+        "value":"",
+        "description":"The maximum spectral range of a diffractogram",
+        "units":[
+        "°2θ"
+        ],
+       "position":7
+    },
+    "End position": {
+      "type": "number",
+      "value":"",
+      "description":"The minimum spectral range of a diffractogram",
+      "units":[
+        "°2θ"
+        ],
+      "position":8
+    }
+  }
+}

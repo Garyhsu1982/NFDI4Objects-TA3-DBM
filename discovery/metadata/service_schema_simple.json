@@ -1,0 +1,734 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://e-rihs.io/schema/draft/service-v0.7.schema.json",
+    "title": "Service Model",
+    "type": "object",
+    "properties": {
+      "pid": {
+        "title": "Persistent Identifier",
+        "description": "PID that links to a landing page",
+        "type": "string"
+      },
+      "pref_label": {
+        "title": "Title",
+        "description": "Service title. For an ARCHLAB service, this could be e.g. 'Access to KIK-IRPA Archives', for the other platforms, this could be the name of the technique.",
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 100
+      },
+      "scope_note": {
+        "title": "Service Summary",
+        "description": "A brief description of a specific technical or access service offered, such as the use of X to investigate Y",
+        "type": "string",
+        "minLength": 100,
+        "maxLength": 1000
+      },
+      "service_readiness_level": {
+        "title": "Service Readiness Level",
+        "description": "This scale is directly based on the standard - Technology readiness levels (TRLs), adapted for heritage science, which are a method for estimating the maturity of the services being offered. For more details see https://en.wikipedia.org/wiki/Technology_readiness_level",
+        "type": "string",
+        "enum": [
+          "1 - Basic principles observed",
+          "2 - Concept formulated (planning)",
+          "3 - Experimental proof of concept",
+          "4 - Concept validated in controlled environment",
+          "5 - Service validated in HS environment (alpha)",
+          "6 - Service demonstrated in HS environment",
+          "7 - Operational service prototype demonstrated (beta)",
+          "8 - Service complete and qualified (release candidate)",
+          "9 - Service proven in operational environment (production)"
+        ]
+      },
+      "service_operating_languages": {
+        "title": "Operating Languages",
+        "description": "What languages can the team operate in or what language is a tool presented in",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "bg - Bulgarian",
+            "cz - Czech",
+            "da - Danish",
+            "de - German",
+            "el - Greek",
+            "en - English",
+            "es - Spanish",
+            "et - Estonian",
+            "fi - Finnish",
+            "fr - French",
+            "ga - Irish",
+            "hr - Croatian",
+            "hu - Hungarian",
+            "it - Italian",
+            "lt - Lithuanian",
+            "lv - Latvian",
+            "mt - Maltese",
+            "nl - Dutch",
+            "no - Norwegian",
+            "pl - Polish",
+            "pt - Portugese",
+            "ro - Romanian",
+            "sk - Slovak",
+            "sl - Slovenian",
+            "sv - Swedish"
+          ]
+        }
+      },
+      "service_techniques": {
+        "title": "Service Techniques",
+        "description": "A list of the analytical techniques carried out within this service. The terms are taken from the Research Vocabularies Australia (https://vocabs.ardc.edu.au/viewById/650).",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "Accelerator mass spectrometry",
+            "Mass spectrometry",
+            "Acid reaction carbonate analysis",
+            "Wet chemistry",
+            "Adsorption analysis",
+            "Physical property measurement",
+            "AFM topography imaging",
+            "Atomic force microscopy",
+            "Imaging techniques",
+            "Surface analysis",
+            "Alpha particle counting",
+            "Particle counting",
+            "Alpha particle spectrometry",
+            "Particle spectrometry",
+            "Alpha recoil track counting",
+            "Geochronology techiques",
+            "Track counting",
+            "Amperometry",
+            "Electrochemical techniques",
+            "Analytical method",
+            "Angle of repose measurement",
+            "Anion chromatography analysis",
+            "Ion chromatography analysis",
+            "Atomic absorption spectrometry",
+            "Optical spectrometry",
+            "Atom probe tomography",
+            "Auger electron spectroscopy",
+            "Electron spectrometry",
+            "Backscattered electron grain boundary imaging",
+            "Electron microscopy imaging",
+            "Backscattered electron imaging",
+            "Bench chemistry ",
+            "Beta counting",
+            "Bioanalytical method",
+            "Broad beam X-ray spectrometry",
+            "X-ray spectrometry",
+            "Capacitance dilatometry",
+            "Carbonate bomb analysis",
+            "Catalytic combustion analysis",
+            "Combustion infrared spectrometry",
+            "Cathodoluminescence imaging",
+            "Cation chromatography analysis",
+            "Cavity enhanced absorption spectrometry",
+            "Laser absorption spectrometry",
+            "Cavity ring-down spectrometry",
+            "Charmograph analysis",
+            "Chromatography analysis",
+            "Colormetric analysis",
+            "Spectrophotometry",
+            "Combustion analysis",
+            "Combustion gas chromatography",
+            "Gas chromatography analysis",
+            "Combustion gas chromatography isotopic ratio mass spectrometry",
+            "Gas chromatography mass spectrometry",
+            "Isotope ratio mass spectrometry",
+            "Infrared spectrometry",
+            "Combustion Ion Chromatography  ",
+            "Compression test",
+            "Confocal X-ray fluorescence spectrometry",
+            "X-ray fluorescence spectrometry",
+            "Continuous flow isotope ratio mass spectrometry",
+            "Elemental analysis mass spectrometry",
+            "Coulometrical analysis",
+            "Desorption electrospray ionization orbitrap mass spectrometry",
+            "Orbitrap mass spectrometry",
+            "Deuteron activation analysis",
+            "Activation analysis",
+            "Dietrich-Fruhling calcimetry",
+            "Differential scanning calorimetry",
+            "Thermal analysis",
+            "Differential thermal analysis",
+            "Direct current plasma emission spectrometry",
+            "Plasma emission spectrometry",
+            "Direct current plasma spectrometry",
+            "Plasma optical spectrometry",
+            "Direct shear strength measurement",
+            "DNA sequencing",
+            "Dual inlet isotope ratio mass spectrometry",
+            "Electrical conductivity measurement",
+            "Electrochemical impedance spectroscopy",
+            "Electron backscatter diffraction",
+            "Electron diffraction",
+            "Electron energy loss spectrometry",
+            "Particle beam excitation",
+            "Electron induced X-ray spectrometry",
+            "Electron spin resonance age analysis",
+            "Electrothermal absorption spectrometry",
+            "Elemental analysis",
+            "Elemental analysis infrared spectrometry",
+            "Elemental analysis isotope ratio mass spectrometry",
+            "Emission spectrometry",
+            "Energy dispersive electron induced X-ray spectrometry",
+            "Energy dispersive X-ray spectrometry",
+            "Energy dispersive X-ray fluorescence spectrometry",
+            "Energy dispersive X-ray spectral data 2D raster",
+            "X-ray composition map",
+            "Energy-filtered transmission electron imaging",
+            "Transmission electron imaging",
+            "Epithermal neutron activation analysis",
+            "Neutron activation analysis",
+            "Extended X-ray absorption fine structure",
+            "X-ray absorption spectrometry",
+            "Fast neutron activation analysis",
+            "Fire assay emission spectrometry",
+            "Fission track counting",
+            "Flame emission spectrometry",
+            "Flow cytometry",
+            "Fluorescence microscopy",
+            "Microscopy",
+            "Fluorescence spectrometry",
+            "Photon spectrometry",
+            "Fluorescent in situ hybridization",
+            "Focused ion beam scanning microscopy",
+            "Fourier transform infrared spectrometry",
+            "Fourier transform ion cyclotron resonance mass spectrometry",
+            "Gamma counting",
+            "Gamma ray spectrometry",
+            "Gas chromatography flame ionization detection",
+            "Gas chromatography thermal conductivity detection",
+            "Gas pycnometry",
+            "40Ar-39Ar geochronology",
+            "Glow discharge mass spectrometry",
+            "Gradient ion chromatography analysis",
+            "Gravimetric analysis",
+            "Gutzeit test",
+            "High resolution inductively coupled plasma mass spectrometry (deprecated)",
+            "Inductively coupled plasma mass spectrometry",
+            "Hybridization assay",
+            "Induction heating analysis",
+            "Inductively coupled plasma emission spectrometry",
+            "Plasma source mass spectrometry",
+            "Inductively coupled plasma optical emission spectrometry",
+            "Infrared absorption spectrometry",
+            "Infrared optical spectrometry",
+            "Infrared photometry",
+            "Photometry",
+            "Infrared reflectance",
+            "Infrared transmission spectrometry",
+            "Transmission spectrometry",
+            "Instrumental neutron activation analysis",
+            "Liquid chromatography analysis",
+            "Ion sensitive electrode analysis",
+            "Potentiometry",
+            "Laser ablation inductively coupled plasma mass spectrometry",
+            "Laser ablation mass spectrometry",
+            "Laser ablation resonance ionization mass spectrometry",
+            "Resonance ionization mass spectrometry",
+            "Laser fluorination mass spectrometry",
+            "Laser Induced Breakdown Spectrometry",
+            "Laser ionization mass spectrometry",
+            "Laser ablation split stream mass spectrometry ",
+            "LECO furnace analysis",
+            "Liquid chromatography mass spectrometry",
+            "Liquid chromatography organic carbon detection",
+            "Liquid inlet inductively coupled plasma mass spectrometry",
+            "Lock in thermography",
+            "Loss on ignition analysis ",
+            "Magnetic field measurement ",
+            "Manometry",
+            "Micromass multiprep mass spectrometry",
+            "Microprobe two step laser mass spectrometry",
+            "Microscopic X-ray imaging",
+            "X-ray imaging",
+            "Micro X-ray fluorescence spectrometry",
+            "Synchroton X-ray fluorescence spectrometry",
+            "Mini cryogen free measurement system for thermal conductivity",
+            "Moisture analysis",
+            "Other",
+            "Mossbauer spectrometry",
+            "Multi collector inductively coupled plasma mass spectrometry",
+            "Nanoindentation and microindentation",
+            "Nanoscale infrared spectrometry",
+            "Negative ion thermal ionization mass spectrometry",
+            "Thermal ionization mass spectrometry",
+            "Neutron counting",
+            "Neutron irradiation noble gas mass spectrometry",
+            "Noble gas mass spectrometry",
+            "Next generation sequencing",
+            "Nuclear magnetic resonance spectrometry",
+            "Spectrometry",
+            "Nuclear microprobe analysis",
+            "Nuclear particle track counting",
+            "Nuclear reaction spectrometry",
+            "Optical emission spectrometry",
+            "Particle cohesion determination",
+            "Particle induced X-ray spectrometry",
+            "Particle size distribution analysis",
+            "Penfield method analysis",
+            "pH measurement",
+            "Photon activation analysis",
+            "Pre irradiation group concentration neutron activation analysis ",
+            "Plasma optical emission spectrometry",
+            "Point counting",
+            "Visible light microscopy",
+            "Polarography",
+            "Voltammetry",
+            "Porosimetry",
+            "Positive ion thermal ionization mass spectrometry",
+            "Prompt gamma neutron activation analysis",
+            "Pyrolysis gas chromatography",
+            "Pyrolysis gas chromatography flame ionization detection",
+            "Pyrolysis gas chromatography mass spectrometry",
+            "Quadrupole inductively coupled plasma mass spectrometry",
+            "Quantitative analysis electron induced X-ray spectrometry",
+            "Quantitative analysis particle induced X-ray spectrometry",
+            "Quantitative polymerase chain reaction",
+            "Quantitative reflectance imaging",
+            "Radiochemical neutron activation analysis",
+            "Raman spectrometry",
+            "Redox potential measurement",
+            "Resonance ionization time of flight noble gas mass spectrometry",
+            "Sanger sequencing",
+            "Scanning transmission electron imaging",
+            "Secondary electron imaging",
+            "Secondary ionization mass spectrometry",
+            "Secondary neutral mass spectrometry",
+            "Sector field inductively coupled plasma mass spectrometry",
+            "Seismic velocity and ultrasonic elastic constant measurement",
+            "Shotgun method",
+            "Sensitive high-mass-resolution ion microprobe",
+            "Single crystal X-ray diffraction",
+            "X-ray diffraction",
+            "Solid source mass spectrometry",
+            "Solid state nuclear magnetic resonance spectroscopy",
+            "Spark source mass spectrometry",
+            "Spherical cell bulk thermal conductivity analysis",
+            "Stepped heating carbon and nitrogen isotopic analysis",
+            "Structured light scanning",
+            "Synchrotron X-ray fluorescence tomography",
+            "X-ray computed tomography",
+            "Temperature programmed desorption electron probe analysis",
+            "Tensiometry",
+            "Thermal neutron activation analysis",
+            "Thermogravimetry analysis",
+            "Thermoluminescence analysis",
+            "Thermoluminescence dating",
+            "Titration",
+            "Total reflection X-ray fluorescence spectrometry",
+            "Transmitted electron diffraction",
+            "Ultraviolet emission spectrometry",
+            "Visible, near-infrared, and mid-infrared imaging",
+            "Wavelength dispersive electron induced X-ray spectrometry",
+            "Wavelength-modulation spectrometry",
+            "X-ray absorption near edge structure spectrometry",
+            "X-ray photoelectron spectrometery",
+            "X-ray photoelectron spectrometry composition mapping",
+            "X-ray powder diffraction"
+          ]
+        }
+      },
+      "service_provider": {
+        "title": "Service Providers",
+        "type": "array",
+        "minLength": 1,
+        "items": {
+          "title": "Service Provider",
+          "type": "object",
+          "required": [
+            "provider_id"
+          ],
+          "properties": {
+            "provider_id": {
+              "title": "Provider ID",
+              "description": "An actor (organisation or person) offering this service, as defined in the system.",
+              "type": "string",
+              "format": "url"
+            },
+            "provider_roles": {
+              "title": "Provider Roles",
+              "description": "This value should be replaced with a controlled list",
+              "enum": [
+                "Access",
+                "Analysis",
+                "Data Acquisition",
+                "Data Interpretation",
+                "Data Presentation",
+                "Data Processing",
+                "Logistics",
+                "All Above"
+                ],
+              "type": "string"
+            }
+          }
+        }
+      },
+      "service_contact": {
+        "title": "Service Contacts",
+        "description": "Contact details for the service; this can be personal or group contact details",
+        "type": "array",
+        "minLength": 1,
+        "items": {
+          "type": "object",
+          "properties": {
+            "contact_type": {
+              "title": "Contact Type",
+              "description": "Email or Phone",
+              "type": "string",
+              "enum": [
+                "email",
+                "phone"
+              ]
+            },
+            "contact": {
+              "title": "Contact",
+              "description": "If internal references are used this data can be stored there, if external IDs are used a specific email address may be required.",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "research_disciplines": {
+        "title": "Research Disciplines",
+        "description": "Which domains or disciplines has a given service worked within, has experience within.",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "measurableProperties": {
+        "title": "Measurable property",
+        "description": "Measurable properties and materials that can be studied by this service",
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "property_class": {
+                    "title": "Measurable property class",
+                    "type": "string",
+                    "enum": [
+                      "acidity",
+                      "age",
+                      "alkalinity",
+                      "brittleness",
+                      "chemical composition",
+                      "chemical properties",
+                      "colour",
+                      "colour change",
+                      "condtion state",
+                      "constituent materials",
+                      "corrosion",
+                      "cracking/crack pattern",
+                      "crystal structure",
+                      "degradation",
+                      "delamination",
+                      "density",
+                      "discolouration",
+                      "distance",
+                      "drying",
+                      "elasticity",
+                      "elemental composition",
+                      "environmental parameters",
+                      "fading",
+                      "geometric characteristics",
+                      "gloss",
+                      "grain size",
+                      "hardness",
+                      "hygroscopicity",
+                      "layer stratigraphy",
+                      "layer thickness",
+                      "light",
+                      "light intensity",
+                      "mass",
+                      "material configuration",
+                      "mechanical behaviour",
+                      "mechanical properties",
+                      "mineral composition",
+                      "molecular composition",
+                      "oxidation",
+                      "permeability",
+                      "physical dimension",
+                      "physical properties",
+                      "pollution/contaminant levels",
+                      "porosity",
+                      "rh",
+                      "roughness",
+                      "soiling",
+                      "strength",
+                      "structural properties",
+                      "temperature",
+                      "texture",
+                      "toughness",
+                      "transparency",
+                      "weight"
+                    ]
+                },
+                "other_property_class": {
+                  "title": "Other property class",
+                  "type": "string"
+                }
+            }
+        }
+    },
+    "materials": {
+      "title": "Materials",
+      "description": "Materials of which the selected measurable property can be studied. This field is connected to an extensive controlled list.",
+      "type": "array",
+      "items": {
+          "type": "object",
+          "properties": {
+              "material": {
+                  "title": "Material",
+                  "type": "string",
+                  "enum": [
+                    "Ceramic",
+                    "Glass",
+                    "Metal",
+                    "Stone",
+                    "Plaster",
+                    "Mortar",
+                    "Pigment",
+                    "Bone",
+                    "Wood",
+                    "Textile",
+                    "Leather",
+                    "Papyrus",
+                    "Amber",
+                    "Jet",
+                    "Pearl"
+                  ]
+              },
+              "other_material": {
+                "title": "Other material",
+                "type": "string"
+            }
+          }
+      }
+  },
+      "service_methods": {
+        "title": "Method statements for the activities in the service",
+        "description": "Service related method statements should be defined in the system and represent the procedures for using individual pieces of equipment or software systems used within the service - detail of setup, methodology, procedures, etc. should all be described within this document and is also directly attached to relevant the Tool (equipment or software) records. Linked to the method model",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "url"
+        }
+      },
+      "service_resources": {
+        "title": "Collections, Objects, Samples and Archives",
+        "description": "Research resources made accessible by the service should be defined in the system and represent the heritage collections, objects, samples, archives, other research resources directly provided by the service.",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "url"
+        }
+      },
+      "service_limitations": {
+        "title": "Service Limitations",
+        "description": "Description of any limitations in the access provision by the service.",
+        "type": "string",
+        "minLength": 100,
+        "maxLength": 500
+      },
+      "service_team": {
+        "title": "Service Team",
+        "type": "array",
+        "minLength": 1,
+        "items": {
+          "title": "Service Team",
+          "type": "object",
+          "required": [
+            "team_member_id",
+            "team_member_roles",
+            "team_member_start_date"
+          ],
+          "properties": {
+            "team_member_id": {
+              "title": "Person ID",
+              "description": "An actor as defined in the system. Linked to Person Model or ORCID",
+              "type": "string",
+              "format": "url"
+            },
+            "team_member_roles": {
+              "title": "Person Roles",
+              "description": "This value should be replaced with a controlled list",
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum":[
+                    "administrative  support",
+                    "active manager",
+                    "conservation specialist",
+                    "data analyst",
+                    "data manager",
+                    "equipment operator",
+                    "general contact",
+                    "non traveling participant",
+                    "project coordinator",
+                    "project deputy",
+                    "research scientist",
+                    "researcher (other)", 
+                    "software developer",
+                    "traveling participant",
+                    "user liaison"
+                ]
+              }
+            },
+            "team_member_start_date": {
+              "title": "Joined service date",
+              "description": "A date to indicate when a given person joined the team working on a given service.",
+              "type": "string",
+              "format": "date"
+            },
+            "team_member_end_date": {
+              "title": "Left service date",
+              "description": "A date to indicate when a given person left the team working on a given service.",
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      },
+      "service_links": {
+        "title": "Service Link",
+        "type": "array",
+        "minLength": 1,
+        "items": {
+          "type": "object",
+          "required": [
+            "link_url",
+            "link_type"
+          ],
+          "properties": {
+            "link_url": {
+              "description": "A related resolvable URL not covered by the other fields",
+              "type": "string"
+            },
+            "link_type": {
+              "description": "A simple definition of the type or purpose of the link.",
+              "type": "string",
+              "enum": [
+                "Blog",
+                "Code repository",
+                "Contact details",
+                "Contributor website",
+                "Data Repository",
+                "Demo",
+                "Developer website",
+                "Documentation",
+                "Download",
+                "Funder website",
+                "Geolocation",
+                "Manufacturer website",
+                "Media",
+                "Offical website",
+                "Online resources",
+                "Personal website",
+                "Tutorial",
+                "Presentation",
+                "Publication",
+                "Reference",
+                "Project webpage",
+                "Related external software dependencies",
+                "Report",
+                "Social media",
+                "Support",
+                "Website"
+              ]
+            }
+          }
+        }
+      },
+      "service_reference": {
+        "title": "Service Reference",
+        "description": "References related to the service",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "reference"
+          ],
+          "properties": {
+            "reference_citation": {
+              "title": "Citation",
+              "description": "The formatted details for the given reference.",
+              "type": "string"
+            },
+            "reference_url": {
+              "title": "URL",
+              "description": "URL",
+              "type": "string",
+              "format": "uri"
+            },
+            "reference_type": {
+              "description": "A simple definition of the type, role or purpose of the reference.",
+              "type": "string",
+              "enum": [
+                "background information",
+                "best practices",
+                "citation requirements",
+                "data provenance",
+                "example data",
+                "example work",
+                "faq",
+                "further detail",
+                "historical context",
+                "license information",
+                "literature review",
+                "methodology",
+                "related research",
+                "related services",
+                "review",
+                "source data",
+                "technical specification",
+                "usage guide",
+                "validation studies"
+              ]
+            }
+          }
+        }
+      },
+      "service_example_outputs": {
+        "title": "Example Output Dataset",
+        "description": "Services that generate data can provide PIDs/URLs for example datasets to demonstrate what types of data and information will be created.",
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "url"
+        }
+      },
+      "service_version": {
+        "title": "Service Version",
+        "description": "Service develop over time with changes of equipment, software, personnel, etc. Version numbers should be changed to indicate these changes - please note very large scale changes may warrant the creation of a new Service record to clarify differences in the data or results created.",
+        "type": "string"
+      },
+      "service_version_date": {
+        "title": "Service Version Date",
+        "description": "The version date is the date from which this particular version of this Service was offered in a formal capacity by the defined Access provider.",
+        "type": "string",
+        "format": "date"
+      },
+      "service_creation_date": {
+        "title": "Service Creation Date",
+        "description": "The creation date is the date from which this particular Service was offered in a formal capacity by the defined Access provider.",
+        "type": "string",
+        "format": "date"
+      },
+      "service_further_comments": {
+        "title": "Other Comments",
+        "description": "Free text opportunity to advocate for what is novel or special about this particular access",
+        "type": "string"
+      },
+      "service_keywords": {
+        "title": "Service keywords",
+        "description": "Additional terms and concepts not covered by the other fields, it would be good to reference these to some form of open vocabulary",
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
